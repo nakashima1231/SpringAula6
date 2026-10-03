@@ -1,0 +1,32 @@
+### login
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "123456"
+}
+
+### Cadastrar Usuário Comum (ROLE_USER)
+POST http://localhost:8080/usuarios
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc5MDMzNTQyNywiZXhwIjoxNzkwNDIxODI3fQ.lYcuCX636OEWGrORNT3KCcdY5LW9W5r95-v7FAOPKGs
+Content-Type: application/json
+
+{
+  "username": "joaquim",
+  "password": "123",
+  "role": "ROLE_USER"
+}
+
+### listando usuários
+GET http://localhost:8080/usuarios
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImlhdCI6MTc5MDk4MDk5NCwiZXhwIjoxNzkxMDY3Mzk0fQ.UfHi4MCeaegK7TqY5oxhlWT7ojAqP2GJalKQejl1rZo
+
+### logando como joaquim
+POST http://localhost:8080/login
+Content-Type: application/json
+
+{
+  "username": "joaquim",
+  "password": "123"
+}
